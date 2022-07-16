@@ -54,10 +54,10 @@ def namelist_processor(event: MessageEvent):
     uid = str(event.user_id)
     if uid in superusers:
         return
-    if is_blacklist and uid in namelist["blacklist"]:
+    if is_blacklist() and uid in namelist["blacklist"]:
         logger.debug(f"用户 {uid} 在黑名单中, 忽略本次消息")
         raise IgnoredException("黑名单用户")
-    elif not (is_blacklist or uid in namelist["whitelist"]):
+    elif not (is_blacklist() or uid in namelist["whitelist"]):
         logger.debug(f"用户 {uid} 不在白名单中, 忽略本次消息")
         raise IgnoredException("非白名单用户")
 
