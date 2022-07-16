@@ -1,6 +1,6 @@
 [project]
 name = "nonebot-plugin-namelist"
-version = "0.1.0"
+version = "0.2.0"
 description = "Blacklist and whitelist in NoneBot2"
 authors = [
     {name = "Akirami", email = "Akiramiaya@outlook.com"},
